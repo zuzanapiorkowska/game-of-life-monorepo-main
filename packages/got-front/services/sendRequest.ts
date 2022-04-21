@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export class SendRequest {
   async tick(boardId: string): Promise<(0 | 1)[][]> {
-    const url = `http://localhost:3333/api/tick/`;
+    const url = `https://aqueous-stream-33098.herokuapp.com/api/tick`;
     try {
       console.log('tried to get next board');
       const response = await axios.get(url + boardId);
@@ -13,7 +13,7 @@ export class SendRequest {
     }
   }
   async newBoard(boardId: string, board: (0 | 1)[][]): Promise<string> {
-    const url = 'http://localhost:3333/api';
+    const url = 'https://aqueous-stream-33098.herokuapp.com/api';
     try {
       console.log('tried to send new board');
       const response = await axios.post(url, {
