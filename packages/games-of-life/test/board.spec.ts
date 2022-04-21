@@ -13,9 +13,9 @@ describe('GOL', () => {
     const board = {
       id: '1',
       array: [
-        [0, 0, 0],
-        [0, 1, 1],
-        [0, 1, 0],
+        [1, 1, 1],
+        [1, 1, 1],
+        [1, 1, 1],
       ],
     };
     game.createCustomBoard(board);
