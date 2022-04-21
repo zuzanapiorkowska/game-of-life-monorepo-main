@@ -6,7 +6,7 @@
     "test": "jest",
     "build": "nx run-many --target=build --all --prod",
     "start:backend": "node dist/packages/games-of-life-backend/main.js",
-    "start:frontend": "cd dist/packages/got-front/main.js && npx next start"
+    "start:frontend": "cd dist/packages/got-front && npx next start"
   },
   "private": true,
   "dependencies": {
