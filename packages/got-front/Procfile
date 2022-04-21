@@ -1,1 +1,1 @@
-web: node dist/packages/games-of-life-frontend
+web: npm run start:frontend
