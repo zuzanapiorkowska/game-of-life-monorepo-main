@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "projects": {
+    "games-of-life": "packages/games-of-life",
+    "games-of-life-backend": "packages/games-of-life-backend",
+    "got-front": "packages/got-front"
+  }
+}

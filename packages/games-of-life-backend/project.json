@@ -1,0 +1,60 @@
+{
+  "root": "packages/games-of-life-backend",
+  "sourceRoot": "packages/games-of-life-backend/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/games-of-life-backend",
+        "main": "packages/games-of-life-backend/src/main.ts",
+        "tsConfig": "packages/games-of-life-backend/tsconfig.app.json",
+        "assets": ["packages/games-of-life-backend/src/assets"]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "packages/games-of-life-backend/src/environments/environment.ts",
+              "with": "packages/games-of-life-backend/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:node",
+      "options": {
+        "buildTarget": "games-of-life-backend:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/games-of-life-backend/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/games-of-life-backend"],
+      "options": {
+        "jestConfig": "packages/games-of-life-backend/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "test:e2e": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/games-of-life-backend"],
+      "options": {
+        "jestConfig": "packages/games-of-life-backend/jest-e2e.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,124 @@
+html {
+  -webkit-text-size-adjust: 100%;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  line-height: 1.5;
+  tab-size: 4;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+p,
+pre {
+  margin: 0;
+}
+
+h1 {
+  padding: 0.5rem 0;
+  color: rgb(115, 175, 115);
+  text-align: center;
+  font-size: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 0.5rem;
+  width: 5rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: rgb(54, 54, 54);
+  color: lightgreen;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.container {
+  height: 100vh;
+  width: 100wh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: grey;
+}
+
+.game-area {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  margin-left: -6rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  margin: 0.2rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 0.3rem;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  margin-left: 4rem;
+}
+
+.label {
+  color: beige;
+  font-weight: bold;
+}
+
+.size-input {
+  margin-top: 0.5rem;
+  width: 5rem;
+  height: 3.5rem;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: rgba(245, 245, 220);
+  color: rgb(115, 175, 115);
+  font-weight: bold;
+  text-align: center;
+}
+
+.size-input::placeholder {
+  color: rgb(138, 175, 138);
+}
+
+button.hidden {
+  display: none;
+}
+
+.margin-right {
+  margin-right: 4rem;
+}
+
+.cell:hover {
+  background-color: rgb(68, 175, 68);
+}
