@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export class SendRequest {
   async tick(boardId: string): Promise<(0 | 1)[][]> {
-    const url = `https://aqueous-stream-33098.herokuapp.com/api/tick`;
+    const url = `https://aqueous-stream-33098.herokuapp.com/api/tick/`;
     try {
       console.log('tried to get next board');
       const response = await axios.get(url + boardId);
