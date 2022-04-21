@@ -1,1 +1,1 @@
-web: npm start:frontend && start:backend
+web: npm start:frontend
